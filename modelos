@@ -1,0 +1,7 @@
+sequelize-cli model:generate --name users --attributes name:string,email:string,enable:boolean,phonenumber:string
+sequelize-cli model:generate --name membership --attributes description:string,price:integer,cycle:integer,active:boolean
+sequelize-cli model:generate --name payments --attributes id_user:integer,id_membership:integer,active:boolean
+sequelize-cli model:generate --name users_membership --attributes id_user:integer,id_membership:integer,active:boolean
+sequelize-cli model:generate --name instructors --attributes name:string,email:string,active:boolean
+sequelize-cli model:generate --name lessons --attributes description:string,monday:string,tuesday:string,wednesday:string,thursday:string,friday:string,saturday:string,sunday:string,active:boolean,id_instructor:integer,start:integer,finish:integer
+sequelize-cli model:generate --name users_lessons --attributes id_lessons:integer,id_user:integer,date:date
