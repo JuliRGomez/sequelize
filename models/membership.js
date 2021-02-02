@@ -10,6 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+
+      this.hasMany(models.payments, {
+        foreignKey: "id_membership"
+      });
+
+      this.belongsToMany(models.membership, {
+        as:"m",
+        through: "users_membership",
+        foreignKey: "id_membership"
+      });
       // define association here
     }
   };

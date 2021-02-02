@@ -22,8 +22,8 @@ module.exports = {
           key: 'id', // key in Target model that we're referencing
         },
       },
-      active: {
-        type: Sequelize.BOOLEAN
+      date: {
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
