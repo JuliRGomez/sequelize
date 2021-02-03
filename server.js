@@ -5,7 +5,7 @@ const usersRouter = require("./routes/users");
 const membershipsRouter = require("./routes/memberships");
 const paymentsRouter = require("./routes/payments");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT  || 8000;
 
 const app = express();
 
