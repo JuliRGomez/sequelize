@@ -3,7 +3,12 @@ const {payments,users,membership} = require ("../models");
 const getPayments = async (req,res) => {
     try {
         const results = await payments.findAll({
-            include: [membership,users]
+          
+            include: [{model:users,
+                    attributes:['name']
+                
+            }]
+           // attributes: ['user.id', 'user.name','user.email','user.phonenumber','membership.price']
         });
         res.json(results);
     }
